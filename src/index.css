@@ -1,0 +1,48 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
+
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* navbar styling */
+
+.top-bar{
+  background-color: black;
+}
+
+.bg-black{
+  background-color: black;
+}
+
+.nav-logo{
+  font-family: 'Work Sans', sans-serif;
+}
+
+.nav-icon{
+  height: 40px;
+  width: 40px;
+}
+
+/* all posts page */
+
+.holder{
+  column-count: 2;
+  column-gap: 10px;
+}
+
+.postcard{
+  width: 100%;
+  display: inline-block;
+  margin: 5px 0px;
+}
+
+.post-img{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+}
+
