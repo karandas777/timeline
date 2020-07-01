@@ -9,6 +9,7 @@ import Header from "./component/Header";
 import User from "./component/User";
 import Footer from "./component/Footer";
 import Info from './component/Info';
+import SignUp from "./component/SignUp";
 
 export default class App extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class App extends Component {
           <Header />
           <div className="container-fluid px-1 py-4 my-4">
             <Route exact path="/" component={Home} />
+            <Route exact path="/signup" component={SignUp} />
             <Route exact path="/new-message" component={NewMessage} />
             <Route exact path="/messages" component={Messages} />
             <Route exact path="/user" component={User} />

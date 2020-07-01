@@ -6,10 +6,12 @@ export const funAddPost = (message) => (dispatch) => {
   axios
     .post(APIURL + method, message)
     .then((res) => {
-      dispatch({
-        type: ADD_POST,
-        payload: res.data.message,
-      });
+      if(res.data.status === "OK"){
+        dispatch({
+          type: ADD_POST,
+          payload: res.data.message,
+        });
+      }
     })
     .catch((err) => {
       console.log(err);
@@ -21,13 +23,14 @@ export const funGetAllPosts = () => (dispatch) => {
   axios
     .get(APIURL + method)
     .then((res) => {
+      if(res.data.status === "OK"){
       dispatch({
         type: GET_ALL_POST,
         payload: res.data.message.reverse(),
       });
+    }
     })
     .catch((err) => {
       console.log(err);
     });
-  window.scrollTo(0, 0);
 };

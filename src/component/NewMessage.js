@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { funAddPost } from "../action/post.action";
+import { funAddPost ,funGetAllPosts } from "../action/post.action";
 import PageTitle from './PageTitle';
 
 class NewMessage extends Component {
@@ -12,6 +12,7 @@ class NewMessage extends Component {
       post_title: "",
       post_cat: "",
       post_body: "",
+      addPostMessage:"",
     };
   }
 
@@ -41,13 +42,10 @@ class NewMessage extends Component {
       post_cat: this.state.post_cat,
       post_body: this.state.post_body,
     };
+    
     this.props.funAddPost(form);
-    this.setState({
-      post_title: "",
-      post_cat: "",
-      post_body: "",
-    });
-    this.props.history.push('/new-message');
+    this.props.funGetAllPosts();
+    this.routeToAllMessages();
   };
 
   routeToAllMessages=()=>{
@@ -124,4 +122,8 @@ class NewMessage extends Component {
   }
 }
 
-export default connect(null, { funAddPost })(NewMessage);
+const mapStateToProps=(state)=>({
+  addPost: state.post.addPost,
+})
+
+export default connect(mapStateToProps, { funAddPost , funGetAllPosts})(NewMessage);

@@ -6,6 +6,7 @@ body {
   margin: 0;
   background-color: #1e1e1e;
   font-family: 'Open Sans', sans-serif;
+  user-select: none;
 }
 
 /* navbar styling */
@@ -41,8 +42,8 @@ body {
 }
 
 .post-img{
-  height: 70px;
-  width: 70px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 
