@@ -3,17 +3,10 @@ import {connect} from 'react-redux';
 import {funGetAllPosts} from '../action/post.action';
 import PostCard from './PostCard';
 import PageTitle from './PageTitle';
+import Loading from './Loading';
 
 class Messages extends Component {
 
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-             loading:false,
-        }
-    }
-    
 
     componentDidMount(){
         window.scrollTo(0, 0);
@@ -26,11 +19,9 @@ class Messages extends Component {
         return (
             <div className="container py-3">
                 <PageTitle title="Latest Posts" />
-                {
-                    this.state.loading === true ? (<div className="text-center text-primary">Loading</div>) : null
-                }
-                
-                <div className="pb-3 my-4">
+                        
+                <div className="pb-3 px-0 my-4">
+                {this.props.allPosts.length === 0 ? (<Loading/>) : null}
                     {
                         this.props.allPosts.map((post)=>(
                             <PostCard key={post._id} post={post}/>

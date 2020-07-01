@@ -5,6 +5,7 @@ export default class Footer extends Component {
 
   funLogOut=()=>{
     localStorage.removeItem('username');
+    localStorage.removeItem('token');
   }
 
   render() {

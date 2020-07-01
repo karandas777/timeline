@@ -9,6 +9,14 @@ body {
   user-select: none;
 }
 
+/* general */
+
+.loading{
+  height: 300px;
+  width: auto;
+  border-radius: 20px;
+}
+
 /* navbar styling */
 
 .top-bar{
@@ -47,3 +55,9 @@ body {
   border-radius: 50%;
 }
 
+/* userpage */
+
+.userprofile{
+  height: 70px;
+  width: 70px;
+}

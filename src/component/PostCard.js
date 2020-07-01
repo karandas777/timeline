@@ -9,7 +9,7 @@ export default class PostCard extends Component {
 
     return (
       <div className="card bg-black text-light mb-3 py-3 px-1">
-        <div className="card-header h6"><img src={imgUrl} alt={post.username} className="post-img bg-dark p-1 mr-2"/>{post.username}</div>
+        <div className="card-header small"><img src={imgUrl} alt={post.username} className="post-img bg-dark p-0 mb-1 mr-2"/>{post.username}</div>
         <div className="card-body">
             <h4 className="card-title mb-3">
               {post.post_title} 

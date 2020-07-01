@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { funAddPost ,funGetAllPosts } from "../action/post.action";
-import PageTitle from './PageTitle';
+import { funAddPost, funGetAllPosts } from "../action/post.action";
+import PageTitle from "./PageTitle";
 
 class NewMessage extends Component {
   constructor(props) {
@@ -12,7 +12,8 @@ class NewMessage extends Component {
       post_title: "",
       post_cat: "",
       post_body: "",
-      addPostMessage:"",
+      addPostMessage: "",
+      valid: true,
     };
   }
 
@@ -42,28 +43,43 @@ class NewMessage extends Component {
       post_cat: this.state.post_cat,
       post_body: this.state.post_body,
     };
-    
+
     this.props.funAddPost(form);
     this.props.funGetAllPosts();
     this.routeToAllMessages();
   };
 
-  routeToAllMessages=()=>{
-      this.props.history.push('/messages')
-  }
+  funValidator = () => {
+    if (
+      this.state.username === "" ||
+      this.state.post_title === "" ||
+      this.state.post_cat === "" ||
+      this.state.post_body === ""
+    ) {
+      this.setState({ valid: false });
+      return false;
+    } else {
+      this.setState({ valid: true });
+      this.funSendMessage();
+    }
+  };
 
-  funReset=()=>{
+  routeToAllMessages = () => {
+    this.props.history.push("/messages");
+  };
+
+  funReset = () => {
     this.setState({
-        post_title: "",
-        post_cat: "",
-        post_body: "",
-      });
-  }
+      post_title: "",
+      post_cat: "",
+      post_body: "",
+    });
+  };
 
   render() {
     return (
       <div className="container rounded py-3">
-          <PageTitle title="Create new Message" />
+        <PageTitle title="Create new Message" />
         <div className="form-group bg-black text-light rounded my-3 col-md-6 mx-auto p-3">
           <div className="my-3 h6">Title</div>
           <input
@@ -74,7 +90,7 @@ class NewMessage extends Component {
             onChange={this.funSetState}
           />
           <div className="my-3 h6">Category</div>
-          <select 
+          <select
             name="post_cat"
             value={this.state.post_cat}
             className="rounded my-3 form-control"
@@ -97,22 +113,23 @@ class NewMessage extends Component {
             onChange={this.funSetState}
           ></textarea>
 
+          {this.state.valid ? null : (
+            <div className="alert alert-danger my-3">
+                Please fill all the details !!!
+            </div>
+          )}
+
           <div className="mt-3 text-right">
-            <button className="btn btn-danger mr-2"
-            onClick={this.routeToAllMessages}
-            >
-            <i className="fa fa-close"></i>
-            </button>
             <button
-              className="btn btn-warning mr-2"
-              onClick={this.funReset}
+              className="btn btn-danger mr-2"
+              onClick={this.routeToAllMessages}
             >
+              <i className="fa fa-close"></i>
+            </button>
+            <button className="btn btn-warning mr-2" onClick={this.funReset}>
               <i className="fa fa-repeat"></i>
             </button>
-            <button
-              className="btn btn-success"
-              onClick={this.funSendMessage}
-            >
+            <button className="btn btn-success" onClick={this.funValidator}>
               <i className="fa fa-plus"></i>
             </button>
           </div>
@@ -122,8 +139,10 @@ class NewMessage extends Component {
   }
 }
 
-const mapStateToProps=(state)=>({
+const mapStateToProps = (state) => ({
   addPost: state.post.addPost,
-})
+});
 
-export default connect(mapStateToProps, { funAddPost , funGetAllPosts})(NewMessage);
+export default connect(mapStateToProps, { funAddPost, funGetAllPosts })(
+  NewMessage
+);
