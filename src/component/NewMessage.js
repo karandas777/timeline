@@ -80,7 +80,7 @@ class NewMessage extends Component {
     return (
       <div className="container rounded py-3">
         <PageTitle title="Create new Message" />
-        <div className="form-group bg-black text-light rounded my-3 col-md-6 mx-auto p-3">
+        <div className="form-group bg-grad text-light rounded my-3 col-md-6 mx-auto p-3">
           <div className="my-3 h6">Title</div>
           <input
             type="text"

@@ -1,7 +1,19 @@
 import React, { Component } from "react";
 import PageTitle from './PageTitle';
+import {connect} from 'react-redux';
+import {funGetSortedPosts} from '../action/post.action';
 
-export default class User extends Component {
+class User extends Component {
+
+  componentDidMount(){
+    this.getMyPosts();
+  }
+
+  getMyPosts=()=>{
+    const name = localStorage.getItem('username');
+    this.props.funGetSortedPosts({username:name});
+  }
+
   render() {
     const name = localStorage.getItem('username');
     const imgUrl = "https://robohash.org/"+name+".png";
@@ -9,7 +21,7 @@ export default class User extends Component {
     return (
       <div className="container py-3">
         <PageTitle title="User Profile" />
-        <div className="my-3 display-4 text-light">
+        <div className="my-3 display-4">
             <img src={imgUrl} alt="userprofile" className="bg-dark userprofile rounded-pill mb-2 mr-3" />
             {name}
             <br/>
@@ -22,3 +34,6 @@ export default class User extends Component {
     );
   }
 }
+
+
+export default connect(null,{funGetSortedPosts})(User);

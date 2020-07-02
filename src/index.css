@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  background-color: #1e1e1e;
   font-family: 'Open Sans', sans-serif;
   user-select: none;
 }
@@ -12,15 +11,15 @@ body {
 /* general */
 
 .loading{
-  height: 300px;
-  width: auto;
+  height: 250px;
+  width: 350px;
   border-radius: 20px;
 }
 
 /* navbar styling */
 
-.top-bar{
-  background-color: black;
+.bg-grad{
+  background: linear-gradient(to right, #ffb75e, #ed8f03);
 }
 
 .bg-black{
@@ -34,6 +33,11 @@ body {
 .nav-icon{
   height: 40px;
   width: 40px;
+}
+
+.foot{
+  background-color: #eaeae8;
+  box-shadow: 0px -2px 5px #929292a8;
 }
 
 /* all posts page */
@@ -50,8 +54,8 @@ body {
 }
 
 .post-img{
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
 }
 

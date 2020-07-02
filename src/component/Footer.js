@@ -10,21 +10,21 @@ export default class Footer extends Component {
 
   render() {
     return (
-      <div className="container-fluid px-1 fixed-bottom w-100 bg-black">
+      <div className="container-fluid px-1 fixed-bottom w-100 foot">
         <div className="container d-flex justify-content-between px-2 py-1">
-          <Link className="btn btn-lg text-light" to="/user">
+          <Link className="btn btn-lg text-dark" to="/user">
             <i className="fa fa-fw fa-user-circle"></i>
           </Link>
-          <Link className="btn btn-lg text-light" to="/messages">
+          <Link className="btn btn-lg text-dark" to="/messages">
             <i className="fa fa-fw fa-bars"></i>
           </Link>
-          <Link className="btn btn-lg text-light" to="/new-message">
+          <Link className="btn btn-lg text-dark" to="/new-message">
             <i className="fa fa-fw fa-plus"></i>
           </Link>
-          <Link className="btn btn-lg text-light" to="/info">
+          <Link className="btn btn-lg text-dark" to="/info">
             <i className="fa fa-fw fa-info-circle"></i>
           </Link>
-          <Link className="btn btn-lg text-light" to="/" onClick={this.funLogOut}>
+          <Link className="btn btn-lg text-dark" to="/" onClick={this.funLogOut}>
             <i className="fa fa-fw fa-power-off"></i>
           </Link>
         </div>

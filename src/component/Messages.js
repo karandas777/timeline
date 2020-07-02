@@ -19,8 +19,12 @@ class Messages extends Component {
         return (
             <div className="container py-3">
                 <PageTitle title="Latest Posts" />
-                        
-                <div className="pb-3 px-0 my-4">
+                        <div className="row m-0">
+                        <div className="col-md-4 p-0">
+                            
+                        </div>
+                        <div className="col-md-8 p-0">
+                        <div className="pb-3 px-0 my-4">
                 {this.props.allPosts.length === 0 ? (<Loading/>) : null}
                     {
                         this.props.allPosts.map((post)=>(
@@ -28,6 +32,9 @@ class Messages extends Component {
                         ))
                     }
                 </div>
+                        </div>
+                        </div>
+                
             </div>
         )
     }

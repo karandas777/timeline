@@ -52,7 +52,7 @@ export default class SignUp extends Component {
         return (
             <div className="container py-3">
                <PageTitle title="Sign-Up" />
-                <div className="form-group bg-black rounded mt-4 col-md-5 mx-auto p-3">
+                <div className="form-group bg-grad rounded mt-4 col-md-5 mx-auto p-3">
                     <div className="text-light h6 mb-3">Username</div>    
                     <input className="form-control my-3" type="text" name="username" value={this.state.username} onChange={this.funSetState}/>
                     <div className="text-light h6 mb-3">Password</div>    
@@ -64,9 +64,10 @@ export default class SignUp extends Component {
                             </div>
                         )}
 
-                    <button className="btn btn-warning w-25 mt-2 mb-3" onClick={this.funValidator}>Sign-In</button>
+                    <button className="btn btn-light text-success mt-2 mb-3" onClick={this.funValidator}>Sign-In</button>
+                    <hr className="w-100 bg-light"/>
                     <div className="text-center">
-                    <Link to="/" className="text-decoration-none small text-warning">
+                    <Link to="/" className="text-decoration-none small text-light">
                         Already have an account? Log-In here.  
                     </Link>
                     </div>

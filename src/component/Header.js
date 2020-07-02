@@ -31,12 +31,11 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="container-fluid top-bar fixed-top w-100 px-1">
-        <div className="container p-2">
+      <div className="container-fluid bg-grad fixed-top w-100 px-1">
+        <div className="container px-2 py-1">
           <div className="nav-logo text-light h3 mb-0 mt-1">
             <img className="nav-icon pb-1 mr-1" src={require('../assets/logo.png')} alt="logo" />
-            <span className="text-warning">Time</span>
-            line.
+            <span className="mb-0">Timeline.</span>
           </div>
         </div>
       </div>

@@ -34,3 +34,15 @@ export const funGetAllPosts = () => (dispatch) => {
       console.log(err);
     });
 };
+
+export const funGetSortedPosts = (data) => (dispatch) => {
+  const method = "/sort-post";
+  const query = data;
+  axios.post(APIURL + method,{query:query})
+  .then((res)=>{
+    console.log(res.data.message);
+  })
+  .catch((err)=>{
+    console.log(err);
+  })
+}
