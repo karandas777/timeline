@@ -16,7 +16,7 @@ export default class Sidebar extends Component {
         </div>
         <div className="px-4 pb-0 pt-5 mt-5">
           <Link className="btn btn-light rounded-pill text-left w-100 mb-3" to="/user">
-            <i className="fa fa-fw fa-user-circle"></i> Profile ({localStorage.getItem('username')})
+            <i className="fa fa-fw fa-user-circle"></i> Profile
           </Link>
           <Link className="btn btn-light rounded-pill text-left w-100 mb-3" to="/messages">
             <i className="fa fa-fw fa-bars"></i> All Posts
