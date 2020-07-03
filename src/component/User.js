@@ -22,7 +22,7 @@ class User extends Component {
       <div className="container py-3">
         <PageTitle title="User Profile" />
         <div className="my-3 display-4">
-            <img src={imgUrl} alt="userprofile" className="bg-dark userprofile rounded-pill mb-2 mr-3" />
+            <img src={imgUrl} alt="userprofile" className="bg-grad userprofile rounded-pill mb-2 mr-3" />
             {name}
             <br/>
 
