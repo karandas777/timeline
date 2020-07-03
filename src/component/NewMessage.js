@@ -126,10 +126,10 @@ class NewMessage extends Component {
               className="btn btn-danger mr-2"
               onClick={this.routeToAllMessages}
             >
-              <i className="fa fa-close"></i> Cancel
+              <i className="fa fa-close"></i>
             </button>
             <button className="btn btn-warning mr-2" onClick={this.funReset}>
-              <i className="fa fa-repeat"></i> Reset
+              <i className="fa fa-repeat"></i>
             </button>
             <button className="btn btn-success" onClick={this.funValidator}>
               <i className="fa fa-plus"></i> Add Post
