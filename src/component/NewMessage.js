@@ -79,21 +79,21 @@ class NewMessage extends Component {
   render() {
     return (
       <div className="container rounded py-3">
-        <PageTitle title="Create new Message" />
-        <div className="form-group bg-grad text-light rounded my-3 col-md-6 mx-auto p-3">
+        <PageTitle title="Create new Post" />
+        <div className="form-group form-bg border border-dark text-dark rounded my-3 col-md-6 mx-auto p-3">
           <div className="my-3 h6">Title</div>
           <input
             type="text"
             name="post_title"
             value={this.state.post_title}
-            className="rounded my-3 form-control"
+            className="rounded my-3 form-control border-dark"
             onChange={this.funSetState}
           />
           <div className="my-3 h6">Category</div>
           <select
             name="post_cat"
             value={this.state.post_cat}
-            className="rounded my-3 form-control"
+            className="rounded my-3 form-control border-dark"
             onChange={this.funSetState}
           >
             <option value="">Select a category</option>
@@ -109,7 +109,7 @@ class NewMessage extends Component {
             rows="3"
             name="post_body"
             value={this.state.post_body}
-            className="rounded my-3 form-control"
+            className="rounded my-3 form-control border-dark"
             onChange={this.funSetState}
           ></textarea>
 
@@ -119,18 +119,20 @@ class NewMessage extends Component {
             </div>
           )}
 
+          <hr className="w-100 bg-grad rounded pt-1"/>
+
           <div className="mt-3 text-right">
             <button
               className="btn btn-danger mr-2"
               onClick={this.routeToAllMessages}
             >
-              <i className="fa fa-close"></i>
+              <i className="fa fa-close"></i> Cancel
             </button>
             <button className="btn btn-warning mr-2" onClick={this.funReset}>
-              <i className="fa fa-repeat"></i>
+              <i className="fa fa-repeat"></i> Reset
             </button>
             <button className="btn btn-success" onClick={this.funValidator}>
-              <i className="fa fa-plus"></i>
+              <i className="fa fa-plus"></i> Add Post
             </button>
           </div>
         </div>

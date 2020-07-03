@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 
 
 export default class Sidebar extends Component {
+
+
+  funLogOut=()=>{
+    localStorage.removeItem('username');
+    localStorage.removeItem('token');
+  }
+
   render() {
     return (
       <div>

@@ -13,8 +13,8 @@ body {
 /* general */
 
 .loading{
-  height: 250px;
-  width: 350px;
+  height: 230px;
+  width: 300px;
   border-radius: 20px;
 }
 
@@ -22,6 +22,11 @@ body {
 
 .bg-grad{
   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(253,193,104,1) 0%, rgba(251,128,128,1) 90% );
+}
+
+.form-bg{
+  background-color: rgba(223,234,247,1);
+  box-shadow: -4px 4px 10px #707070a8;
 }
 
 .bg-black{

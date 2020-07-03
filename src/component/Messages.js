@@ -15,7 +15,7 @@ class Messages extends Component {
     return (
       <div className="container-fluid py-3">
         <PageTitle title="Latest Posts" />
-        <div className="text-right text-primary small my-3">{this.props.allPosts.length} : Posts</div>
+        <div className="text-right text-secondary small my-3">{this.props.allPosts.length} : Posts</div>
 
         <div className="pb-2 px-0 my-4">
           {this.props.allPosts.length === 0 ? <Loading /> : null}

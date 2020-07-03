@@ -1,4 +1,4 @@
-import { ADD_POST, GET_ALL_POST, APIURL } from "./types";
+import { ADD_POST, GET_ALL_POST, APIURL, GET_SORTED_POST } from "./types";
 import axios from "axios";
 
 export const funAddPost = (message) => (dispatch) => {
@@ -40,7 +40,10 @@ export const funGetSortedPosts = (data) => (dispatch) => {
   const query = data;
   axios.post(APIURL + method,{query:query})
   .then((res)=>{
-    console.log(res.data.message);
+    dispatch({
+      type:GET_SORTED_POST,
+      payload:res.data.message,
+    })
   })
   .catch((err)=>{
     console.log(err);
