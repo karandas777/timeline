@@ -42,7 +42,7 @@ export const funGetSortedPosts = (data) => (dispatch) => {
   .then((res)=>{
     dispatch({
       type:GET_SORTED_POST,
-      payload:res.data.message,
+      payload:res.data.message.reverse(),
     })
   })
   .catch((err)=>{

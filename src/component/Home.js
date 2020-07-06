@@ -14,6 +14,7 @@ export default class Home extends Component {
              username:"",
              password:"",
              valid:true,
+             loading:false,
         }
     }
 
@@ -40,6 +41,7 @@ export default class Home extends Component {
             if(res.data.status === "OK"){
                 localStorage.setItem('username',this.state.username);
                 localStorage.setItem('token',res.data.token);
+                this.setState({ loading: false });
                 this.props.history.push('/messages');
             }
             else{
@@ -52,8 +54,10 @@ export default class Home extends Component {
     }
 
     funValidator = () => {
+        this.setState({ loading: true });
         if (this.state.username === "" || this.state.password === "" ) {
           this.setState({ valid: false });
+          this.setState({ loading: false });
           return false;
         } else {
           this.setState({ valid: true });
@@ -77,7 +81,12 @@ export default class Home extends Component {
                             </div>
                         )}
                     
-                    <button className="btn btn-success mt-2 mb-3" onClick={this.funValidator}>Login</button>
+                    <button className="btn btn-success mt-2 mb-3" onClick={this.funValidator}>
+                        Login
+                        {
+                            this.state.loading ? (<i className="fa fa-spin ml-1 fa-spinner"></i>) : null
+                        }
+                    </button>
                     <hr className="w-100 bg-grad rounded pt-1"/>
                     <div className="text-center">
                     <Link to="/signup" className="text-decoration-none small text-dark">

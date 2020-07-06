@@ -21,12 +21,12 @@ body {
 /* navbar styling */
 
 .bg-grad{
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(253,193,104,1) 0%, rgba(251,128,128,1) 90% );
+  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
 }
 
 .form-bg{
-  background-color: rgba(223,234,247,1);
-  box-shadow: -4px 4px 10px #707070a8;
+  background-color: #eaeae8;
+  /* box-shadow: -4px 4px 10px #707070a8; */
 }
 
 .bg-black{
@@ -35,6 +35,7 @@ body {
 
 .nav-logo{
   font-family: 'Work Sans', sans-serif;
+  font-size: 30px;
 }
 
 .nav-icon{
@@ -43,28 +44,12 @@ body {
 }
 
 .foot{
-  display: none;
   background-color: #eaeae8;
-  box-shadow: 0px -2px 5px #929292a8;
-}
-
-.head{
-  display:none;
-}
-
-.side-bar{
-  display: inline-block;
-  box-shadow: 3px 0px 5px #929292a8;
-  height: 100vh;
-}
-
-.main-section{
-  height: 100vh;
-  padding: 0px 20px;
+  box-shadow: 0px -2px 5px #5a5a5a81;
 }
 
 .master-holder{
-  padding: 0px;
+  padding: 20px 0px 40px 0px;
 }
 
 /* all posts page */
@@ -81,40 +66,47 @@ body {
 }
 
 .post-img{
-  height: 35px;
-  width: 35px;
+  height: auto;
+  width: 75%;
   border-radius: 50%;
+  margin: 40px 0px;
+}
+
+.post-pic-holder{
+  text-align: center;
+}
+
+.post-body{
+  padding: 30px;
 }
 
 .card-title{
   font-family: 'Alfa Slab One', cursive;
 }
 
+
 /* userpage */
 
 .userprofile{
-  height: 70px;
-  width: 70px;
+  height: 150px;
+  width: 150px;
 }
 
 
 /* media QUERIES */
 
 @media screen and (max-width:600px){
-  .foot{
-    display:block;
+  
+  .post-img{
+    width: 30%;
+    margin: 30px;
   }
-  .head{
-    display:block;
+
+  .post-pic-holder{
+    text-align: left;
   }
-  .side-bar{
-    display: none;
-  }
-  .main-section{
-    height: 85vh;
-    padding: 0px;
-  }
-  .master-holder{
-    padding: 40px 0px;
+
+  .post-body{
+    padding: 5px;
   }
 }

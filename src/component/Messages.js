@@ -6,14 +6,16 @@ import PageTitle from "./PageTitle";
 import Loading from "./Loading";
 
 class Messages extends Component {
+
+
   componentDidMount() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
     this.props.funGetAllPosts();
   }
 
   render() {
     return (
-      <div className="container-fluid py-3">
+      <div className="container py-3">
         <PageTitle title="Latest Posts" />
         <div className="text-right text-secondary small my-3">{this.props.allPosts.length} : Posts</div>
 

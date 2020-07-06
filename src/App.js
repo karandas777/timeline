@@ -10,8 +10,8 @@ import User from "./component/User";
 import Footer from "./component/Footer";
 import Info from "./component/Info";
 import SignUp from "./component/SignUp";
-import PrivateRoute from "./component/PrivateRoute";
-import Sidebar from "./component/Sidebar";
+import PrivateRoute from "./component/PrivateRoute"
+
 
 export default class App extends Component {
   render() {
@@ -20,11 +20,7 @@ export default class App extends Component {
         <Router>
         <Header />
           <div className="container-fluid master-holder">
-            <div className="row m-0">
-              <div className="col-md-3 bg-grad p-0 side-bar overflow-auto">
-                  <Sidebar/>
-              </div>
-              <div className="col-md-9 main-section overflow-auto">
+            
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/signup" component={SignUp} />
@@ -33,8 +29,7 @@ export default class App extends Component {
                   <PrivateRoute exact path="/user" component={User} />
                   <PrivateRoute exact path="/info" component={Info} />
                 </Switch>
-              </div>
-            </div>
+           
           </div>
           <Footer />
         </Router>
