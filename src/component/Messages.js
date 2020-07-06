@@ -4,6 +4,7 @@ import { funGetAllPosts } from "../action/post.action";
 import PostCard from "./PostCard";
 import PageTitle from "./PageTitle";
 import Loading from "./Loading";
+import Back2Top from "./Back2Top";
 
 class Messages extends Component {
 
@@ -25,6 +26,7 @@ class Messages extends Component {
             <PostCard key={post._id} post={post} />
           ))}
         </div>
+        <Back2Top/>
       </div>
     );
   }

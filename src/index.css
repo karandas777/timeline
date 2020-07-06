@@ -10,6 +10,10 @@ body {
   user-select: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /* general */
 
 .loading{
@@ -97,13 +101,13 @@ body {
 
 @media screen and (max-width:600px){
   
-  .post-img{
-    width: 30%;
-    margin: 30px;
+  .nav-logo{
+    font-size: 20px;
   }
 
-  .post-pic-holder{
-    text-align: left;
+  .post-img{
+    width: 30%;
+    margin: 30px 0px;
   }
 
   .post-body{

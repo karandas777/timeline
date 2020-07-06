@@ -13,7 +13,7 @@ export default class Footer extends Component {
     return (
       
       <div className="container-fluid px-1 fixed-bottom w-100 foot">
-        <div className="container col-md-4 d-flex justify-content-between px-2 py-1">
+        <div className="container col-md-4 d-flex justify-content-around px-2 py-1">
           <Link className="btn text-dark" to="/user" data-toggle="tooltip" data-placement="top" title="Profile">
             <i className="fa fa-fw fa-user-circle"></i>
           </Link>

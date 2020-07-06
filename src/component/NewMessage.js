@@ -79,22 +79,22 @@ class NewMessage extends Component {
 
   render() {
     return (
-      <div className="container rounded py-3">
+      <div className="container py-3">
         <PageTitle title="Create new Post" />
-        <div className="form-group form-bg border border-dark text-dark rounded my-3 col-md-6 mx-auto p-3">
+        <div className="form-group form-bg text-dark mt-4 col-md-6 mx-auto p-3">
           <div className="my-3 h6">Title</div>
           <input
             type="text"
             name="post_title"
             value={this.state.post_title}
-            className="rounded my-3 form-control border-dark"
+            className="rounded my-3 form-control"
             onChange={this.funSetState}
           />
           <div className="my-3 h6">Category</div>
           <select
             name="post_cat"
             value={this.state.post_cat}
-            className="rounded my-3 form-control border-dark"
+            className="rounded my-3 form-control"
             onChange={this.funSetState}
           >
             <option value="">Select a category</option>
@@ -110,7 +110,7 @@ class NewMessage extends Component {
             rows="3"
             name="post_body"
             value={this.state.post_body}
-            className="rounded my-3 form-control border-dark"
+            className="rounded my-3 form-control"
             onChange={this.funSetState}
           ></textarea>
 
@@ -119,8 +119,6 @@ class NewMessage extends Component {
                 Please fill all the details !!!
             </div>
           )}
-
-          <hr className="w-100 bg-grad rounded pt-1"/>
 
           <div className="mt-3 text-right">
             <button

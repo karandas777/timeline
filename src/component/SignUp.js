@@ -52,11 +52,11 @@ export default class SignUp extends Component {
         return (
             <div className="container py-3">
                <PageTitle title="Sign-Up" />
-                <div className="form-group form-bg border border-dark rounded mt-4 col-md-5 mx-auto p-3">
+                <div className="form-group form-bg mt-4 col-md-5 mx-auto p-3">
                     <div className="text-dark h6 mb-3">Username</div>    
-                    <input className="form-control border-dark my-3" type="text" name="username" value={this.state.username} onChange={this.funSetState}/>
+                    <input className="form-control my-3" type="text" name="username" value={this.state.username} onChange={this.funSetState}/>
                     <div className="text-dark h6 mb-3">Password</div>    
-                    <input className="form-control border-dark my-3" type="password" name="password" value={this.state.password} onChange={this.funSetState}/>
+                    <input className="form-control my-3" type="password" name="password" value={this.state.password} onChange={this.funSetState}/>
                     
                         {this.state.valid ? null : (
                             <div className="alert alert-danger my-3">

@@ -32,10 +32,10 @@ export default class Header extends Component {
   render() {
     return (
       <div className="container-fluid form-bg head px-1">
-        <div className="container px-2 py-1">
-          <div className="nav-logo text-dark mb-0 mt-1">
+        <div className="container py-0">
+          <span className="nav-logo text-light mb-0 mt-1 bg-grad px-2 rounded">
            Timeline.
-          </div>
+          </span>
         </div>
       </div>
     );

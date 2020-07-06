@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {funGetSortedPosts} from '../action/post.action';
 import Loading from "./Loading";
 import UserPostCard from "./UserPostCard";
+import Back2Top from "./Back2Top";
 
 
 class User extends Component {
@@ -109,6 +110,8 @@ class User extends Component {
           ))}
         </div>
 
+        <Back2Top/>
+
         <div
           className="modal fade"
           id="editor"
@@ -117,34 +120,24 @@ class User extends Component {
         >
           <div className="modal-dialog" role="document">
             <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title text-left">
-                  Hello
-                </h5>
-                <button
-                  type="button"
-                  className="close"
-                  data-dismiss="modal"
-                  aria-label="Close"
-                >
-                  <i className="fa fa-close"></i>
-                </button>
-              </div>
-              <div className="modal-body text-left">
-              <div className="form-group form-bg border border-dark text-dark rounded my-3 p-3">
-          <div className="my-3 h6">Title</div>
+                   
+              <div className="modal-body p-0 text-left">
+                
+              <div className="form-group form-bg text-dark m-0 p-3">
+                <PageTitle title="Edit Post" />
+          <div className="mb-3 mt-4 h6">Title</div>
           <input
             type="text"
             name="post_title"
             value={this.state.post_title}
-            className="rounded my-3 form-control border-dark"
+            className="rounded my-3 form-control"
             onChange={this.funSetState}
           />
           <div className="my-3 h6">Category</div>
           <select
             name="post_cat"
             value={this.state.post_cat}
-            className="rounded my-3 form-control border-dark"
+            className="rounded my-3 form-control"
             onChange={this.funSetState}
           >
             <option value="">Select a category</option>
@@ -160,7 +153,7 @@ class User extends Component {
             rows="3"
             name="post_body"
             value={this.state.post_body}
-            className="rounded my-3 form-control border-dark"
+            className="rounded my-3 form-control"
             onChange={this.funSetState}
           ></textarea>
 
@@ -170,9 +163,16 @@ class User extends Component {
             </div>
           )}
 
-          <hr className="w-100 bg-grad rounded pt-1"/>
 
           <div className="mt-3 text-right">
+                <button
+                  type="button"
+                  className="btn btn-danger mr-2"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i className="fa fa-close"></i>
+                </button>
             <button className="btn btn-warning mr-2" onClick={this.funClearState}>
               <i className="fa fa-repeat"></i>
             </button>
@@ -181,18 +181,6 @@ class User extends Component {
             </button>
           </div>
         </div>
-              </div>
-              <div className="modal-footer">
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  data-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" className="btn btn-primary">
-                  Save changes
-                </button>
               </div>
             </div>
           </div>
