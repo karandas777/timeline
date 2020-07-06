@@ -31,11 +31,11 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="container-fluid form-bg head px-1">
+      <div className="container-fluid bg-grad head px-1">
         <div className="container py-0">
-          <span className="nav-logo text-light mb-0 mt-1 bg-grad px-2 rounded">
+          <div className="nav-logo text-light mb-0 mt-1">
            Timeline.
-          </span>
+          </div>
         </div>
       </div>
     );
