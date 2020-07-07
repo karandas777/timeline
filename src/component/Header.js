@@ -46,7 +46,7 @@ export default class Header extends Component {
               Timeline.
             </Link>
             <button
-              className="navbar-toggler border-light py-2"
+              className="navbar-toggler border-light py-1"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNavAltMarkup"
@@ -54,7 +54,7 @@ export default class Header extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <i className="fa fa-th-large text-light"></i>
+              <i className="fa fa-bars text-light"></i>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav ml-auto">
