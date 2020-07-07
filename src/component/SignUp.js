@@ -64,7 +64,7 @@ export default class SignUp extends Component {
                             </div>
                         )}
 
-                    <button className="btn btn-warning mt-2 mb-3" onClick={this.funValidator}>Sign-Up</button>
+                    <button className="btn btn-warning mt-2 mb-3" onClick={this.funValidator}>SignUp</button>
                     <hr className="w-100 bg-grad rounded pt-1"/>
                     <div className="text-center">
                     <Link to="/" className="text-decoration-none small text-dark">

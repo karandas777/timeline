@@ -7,7 +7,6 @@ import Messages from "./component/Messages";
 import NewMessage from "./component/NewMessage";
 import Header from "./component/Header";
 import User from "./component/User";
-import Footer from "./component/Footer";
 import Info from "./component/Info";
 import SignUp from "./component/SignUp";
 import PrivateRoute from "./component/PrivateRoute"
@@ -24,14 +23,13 @@ export default class App extends Component {
                 <Switch>
                   <Route exact path="/" component={Home} />
                   <Route exact path="/signup" component={SignUp} />
-                  <PrivateRoute exact path="/new-message" component={NewMessage} />
-                  <PrivateRoute exact path="/messages" component={Messages} />
+                  <PrivateRoute exact path="/new-post" component={NewMessage} />
+                  <PrivateRoute exact path="/all-posts" component={Messages} />
                   <PrivateRoute exact path="/user" component={User} />
                   <PrivateRoute exact path="/info" component={Info} />
                 </Switch>
            
           </div>
-          <Footer />
         </Router>
       </Provider>
     );

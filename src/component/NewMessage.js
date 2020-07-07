@@ -66,7 +66,7 @@ class NewMessage extends Component {
   };
 
   routeToAllMessages = () => {
-    this.props.history.push("/messages");
+    this.props.history.push("/all-posts");
   };
 
   funReset = () => {

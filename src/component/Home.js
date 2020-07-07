@@ -21,7 +21,7 @@ export default class Home extends Component {
     componentDidMount(){
         const token = localStorage.getItem('token');
         if (token !== null && token !== undefined && token !== ""){
-            this.props.history.push('/messages');
+            this.props.history.push('/all-posts');
         }
     }
     
@@ -42,9 +42,10 @@ export default class Home extends Component {
                 localStorage.setItem('username',this.state.username);
                 localStorage.setItem('token',res.data.token);
                 this.setState({ loading: false });
-                this.props.history.push('/messages');
+                this.props.history.push('/all-posts');
             }
             else{
+                this.setState({loading:false});
                 this.setState({ valid: false });
             }
         })

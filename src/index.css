@@ -56,6 +56,10 @@ html{
   padding: 20px 0px 40px 0px;
 }
 
+.btt{
+  box-shadow: 0px 0px 5px #4b4b4b81;
+}
+
 /* all posts page */
 
 .holder{
@@ -101,9 +105,9 @@ html{
 
 @media screen and (max-width:600px){
   
-  .nav-logo{
+  /* .nav-logo{
     font-size: 20px;
-  }
+  } */
 
   .post-img{
     width: 30%;

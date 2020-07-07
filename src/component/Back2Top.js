@@ -8,9 +8,9 @@ export default class Back2Top extends Component {
 
     render() {
         return (
-            <div className="text-center my-5">
-                <button className="btn bg-grad border-light rounded-pill text-light" onClick={this.scrollTop}>
-                <i className="fa fa-chevron-circle-up"></i> Back to Top
+            <div className="text-right fixed-bottom mb-3 px-3">
+                <button className="btn bg-grad border-0 btt rounded-pill text-light" onClick={this.scrollTop}>
+                <i className="fa fa-chevron-circle-up"></i>
                 </button>
             </div>
         )

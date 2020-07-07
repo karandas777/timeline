@@ -14,7 +14,7 @@ export default class PostCard extends Component {
             <img
               src={imgUrl}
               alt={post.username}
-              className="post-img bg-grad p-2"
+              className="post-img bg-light p-2"
             />
           </div>
           <div className="col-md-8 py-3">
