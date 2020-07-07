@@ -14,6 +14,7 @@ export default class SignUp extends Component {
              username:"",
              password:"",
              valid:true,
+             loading:false,
         }
     }
     
@@ -29,7 +30,9 @@ export default class SignUp extends Component {
         }
         axios.post(APIURL+method,form)
         .then((res)=>{
+            this.setState({loading:true});
             if(res.data.status === "OK"){
+                this.setState({loading:false});
                 this.props.history.push('/');
             }
         })
@@ -39,8 +42,10 @@ export default class SignUp extends Component {
     }
 
     funValidator = () => {
+        this.setState({ loading: true });
         if (this.state.username === "" || this.state.password === "" ) {
           this.setState({ valid: false });
+          this.setState({ loading: false });
           return false;
         } else {
           this.setState({ valid: true });
@@ -64,7 +69,12 @@ export default class SignUp extends Component {
                             </div>
                         )}
 
-                    <button className="btn btn-warning mt-2 mb-3" onClick={this.funValidator}>SignUp</button>
+                    <button className="btn btn-warning mt-2 mb-3" onClick={this.funValidator}>
+                        SignUp
+                        {
+                            this.state.loading ? (<i className="fa fa-spin ml-1 fa-spinner"></i>) : null
+                        }
+                    </button>
                     <hr className="w-100 bg-grad rounded pt-1"/>
                     <div className="text-center">
                     <Link to="/" className="text-decoration-none small text-dark">
