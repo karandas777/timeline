@@ -27,7 +27,10 @@ export default class UserPostCard extends Component {
               >
               Edit
               </button>
-              <button className="btn btn-danger btn-sm">Delete</button>
+              <button className="btn btn-danger btn-sm" 
+              data-toggle="modal" data-target='#deletor'
+              onClick={()=>{this.props.funSetPost(post)}}
+              >Delete</button>
             
             </div>
             

@@ -1,4 +1,4 @@
-import { ADD_POST, GET_ALL_POST, APIURL, GET_SORTED_POST } from "./types";
+import { ADD_POST, GET_ALL_POST, APIURL, GET_SORTED_POST, UPDATE_POST ,DELETE_POST } from "./types";
 import axios from "axios";
 
 export const funAddPost = (message) => (dispatch) => {
@@ -49,3 +49,37 @@ export const funGetSortedPosts = (data) => (dispatch) => {
     console.log(err);
   })
 }
+
+export const funUpdatePost = (message) => (dispatch) => {
+  const method = "/edit-post";
+  axios
+    .post(APIURL + method, message)
+    .then((res) => {
+      if(res.data.status === "OK"){
+        dispatch({
+          type: UPDATE_POST,
+          payload: res.data.message,
+        });
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+export const funDeletePost = (message) => (dispatch) => {
+  const method = "/remove-post";
+  axios
+    .post(APIURL + method, message)
+    .then((res) => {
+      if(res.data.status === "OK"){
+        dispatch({
+          type: DELETE_POST,
+          payload: res.data.message,
+        });
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
