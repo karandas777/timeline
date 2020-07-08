@@ -10,11 +10,12 @@ export default class PostCard extends Component {
     return (
       <div className="my-4 p-0">
         <div className="row m-0">
-          <div className="col-2 post-pic-holder p-0">
+          <div className="col-2 post-pic-holder text-left p-0">
+            
             <img
               src={imgUrl}
               alt={post.username}
-              className="post-img bg-grad p-2"
+              className="post-img bg-grad p-1"
             />
           </div>
           <div className="col-10 py-3 form-bg text-dark rounded">

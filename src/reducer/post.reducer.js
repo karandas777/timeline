@@ -19,14 +19,12 @@ export default function(state = initialState , action){
         case UPDATE_POST:
             return{
                 ...state,
-                sortedPosts:[],
                 updatePost:action.payload,
             }
             
         case DELETE_POST :
             return{
                 ...state,
-                sortedPosts:[],
                 deletePost:action.payload,
             }
 

@@ -10,6 +10,7 @@ import User from "./component/User";
 import Info from "./component/Info";
 import SignUp from "./component/SignUp";
 import PrivateRoute from "./component/PrivateRoute"
+import Footer from "./component/Footer";
 
 
 export default class App extends Component {
@@ -30,6 +31,7 @@ export default class App extends Component {
                 </Switch>
            
           </div>
+          <Footer/>
         </Router>
       </Provider>
     );

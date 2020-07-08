@@ -42,18 +42,17 @@ html{
   font-size: 30px;
 }
 
-.nav-icon{
-  height: 40px;
-  width: 40px;
+.foot-logo{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 50px;
 }
 
 .foot{
-  background-color: #eaeae8;
-  box-shadow: 0px -2px 5px #5a5a5a81;
+  z-index: 1;
 }
 
 .master-holder{
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px;
 }
 
 .btt{
@@ -61,11 +60,6 @@ html{
 }
 
 /* all posts page */
-
-.holder{
-  column-count: 2;
-  column-gap: 10px;
-}
 
 .postcard{
   width: 100%;
@@ -77,11 +71,6 @@ html{
   height: auto;
   width: 75%;
   border-radius: 50%;
-  margin-top: 3px;
-}
-
-.post-pic-holder{
-  text-align: center;
 }
 
 .post-body{
