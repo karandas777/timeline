@@ -56,8 +56,8 @@ export default class SignUp extends Component {
     render() {
         return (
             <div className="container py-3">
-               <PageTitle title="Sign-Up" />
-                <div className="form-group form-bg mt-4 col-md-5 mx-auto p-3">
+               <PageTitle title="Create Account" />
+                <div className="form-group form-bg rounded mt-5 col-md-5 mx-auto p-3">
                     <div className="text-dark h6 mb-3">Username</div>    
                     <input className="form-control my-3" type="text" name="username" value={this.state.username} onChange={this.funSetState}/>
                     <div className="text-dark h6 mb-3">Password</div>    
@@ -70,7 +70,7 @@ export default class SignUp extends Component {
                         )}
 
                     <button className="btn btn-warning mt-2 mb-3" onClick={this.funValidator}>
-                        SignUp
+                        Create
                         {
                             this.state.loading ? (<i className="fa fa-spin ml-1 fa-spinner"></i>) : null
                         }

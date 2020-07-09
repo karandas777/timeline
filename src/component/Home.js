@@ -70,7 +70,7 @@ export default class Home extends Component {
         return (
             <div className="container py-3">
                <PageTitle title="Log-In" />
-                <div className="form-group form-bg mt-4 col-md-5 mx-auto p-3">
+                <div className="form-group form-bg rounded mt-5 col-md-5 mx-auto p-3">
                     <div className="text-dark h6 mb-3">Username</div>    
                     <input className="form-control my-3" type="text" name="username" value={this.state.username} onChange={this.funSetState}/>
                     <div className="text-dark h6 mb-3">Password</div>    
@@ -91,7 +91,7 @@ export default class Home extends Component {
                     <hr className="w-100 bg-grad rounded pt-1"/>
                     <div className="text-center">
                     <Link to="/signup" className="text-decoration-none small text-dark">
-                        Dont have an account? Sign-Up here.  
+                        Dont have an account? Create here.  
                     </Link>
                     </div>
                 </div>    

@@ -126,7 +126,7 @@ class User extends Component {
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-body p-0 text-left">
-                <div className="form-group form-bg text-dark m-0 p-3">
+                <div className="form-group form-bg rounded text-dark m-0 p-3">
                   <PageTitle title="Edit Post" />
                   <div className="mb-3 mt-4 h6">Title</div>
                   <input
@@ -200,13 +200,13 @@ class User extends Component {
           <div className="modal-dialog modal-dialog-centered modal-sm" role="document">
             <div className="modal-content">
               <div className="modal-body p-0 text-left">
-                <div className="form-group form-bg text-dark m-0 p-3">
+                <div className="form-group form-bg rounded text-dark m-0 p-3">
                   <PageTitle title="Delete Post" />
                   <div className="my-4 h6 text-center">Are you sure ?</div>
                   
                   <div className="my-3 text-center">
                   <button
-                      className="btn btn-secondary mr-3"
+                      className="btn btn-secondary mr-5"
                       data-dismiss="modal"
                     >
                       No

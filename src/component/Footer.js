@@ -21,9 +21,23 @@ export default class Footer extends Component {
               <p className="mb-5 mt-0 pr-5 mr-5">
                 <i className="fa fa-play mr-2"></i>Blog Network
               </p>
-
             </div>
-            <div className="col-md-3 pt-3 pb-3">
+
+
+            <div className="col-md-4 pt-3 pb-3">
+              <h6 className="text-light">Powered By</h6>
+              <div className="mt-4 mb-2">
+                    <img src={require('../assets/mongo.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
+                    <img src={require('../assets/node.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
+                    <img src={require('../assets/react.png')} alt="foot icons" className="form-bg rounded-pill p-2"/>
+                    <div className="mt-3"></div>
+                    <img src={require('../assets/bts.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
+                    <img src={require('../assets/git.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
+                    <img src={require('../assets/heroku.png')} alt="foot icons" className="form-bg rounded-pill p-2"/>
+              </div>
+            </div>
+
+            <div className="col-md-2 pt-3 pb-3">
               <h4 className="text-light">Navigate</h4>
               <ul className="list-group mt-3 ml-3">
                 <li>
@@ -49,7 +63,7 @@ export default class Footer extends Component {
               </ul>
             </div>
 
-            <div className="col-md-5 pt-3 pb-3">
+            <div className="col-md-2 pt-3 pb-3">
               <h4 className="text-light">Contact</h4>
               <div className="mt-4">
                     <div className="mb-3">
@@ -67,6 +81,7 @@ export default class Footer extends Component {
                 
               </div>
             </div>
+
           </div>
         </div>
       </div>

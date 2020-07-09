@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
 
 body {
@@ -26,6 +26,10 @@ html{
 
 .bg-grad{
   background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
+
+.text-grad{
+  color:  rgb(242, 112, 156);
 }
 
 .form-bg{
@@ -53,6 +57,7 @@ html{
 
 .master-holder{
   padding: 20px 0px;
+  min-height: 100vh;
 }
 
 .btt{
@@ -78,7 +83,7 @@ html{
 }
 
 .card-title{
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 

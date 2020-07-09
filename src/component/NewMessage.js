@@ -81,7 +81,7 @@ class NewMessage extends Component {
     return (
       <div className="container py-3">
         <PageTitle title="Create new Post" />
-        <div className="form-group form-bg text-dark mt-4 col-md-6 mx-auto p-3">
+        <div className="form-group form-bg rounded text-dark mt-5 col-md-6 mx-auto p-3">
           <div className="my-3 h6">Title</div>
           <input
             type="text"
