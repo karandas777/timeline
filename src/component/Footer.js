@@ -8,7 +8,7 @@ export default class Footer extends Component {
       <div className="container-fluid bg-grad foot text-light">
         <div className="container py-3">
           <div className="row py-4">
-            <div className="col-md-4 pt-3 pb-3">
+            <div className="col-md-4 pt-5 pb-3">
             <Link
               className="foot-logo text-decoration-none text-light"
               to="/all-posts"
@@ -27,13 +27,13 @@ export default class Footer extends Component {
             <div className="col-md-4 pt-3 pb-3">
               <h6 className="text-light">Powered By</h6>
               <div className="mt-4 mb-2">
-                    <img src={require('../assets/mongo.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
-                    <img src={require('../assets/node.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
-                    <img src={require('../assets/react.png')} alt="foot icons" className="form-bg rounded-pill p-2"/>
+                    <img src={require('../assets/mongo.png')} alt="foot icons" className="foot-icon mr-3"/>
+                    <img src={require('../assets/node.png')} alt="foot icons" className="foot-icon mr-3"/>
+                    <img src={require('../assets/react.png')} alt="foot icons" className="foot-icon"/>
                     <div className="mt-3"></div>
-                    <img src={require('../assets/bts.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
-                    <img src={require('../assets/git.png')} alt="foot icons" className="form-bg rounded-pill p-2 mr-3"/>
-                    <img src={require('../assets/heroku.png')} alt="foot icons" className="form-bg rounded-pill p-2"/>
+                    <img src={require('../assets/bts.png')} alt="foot icons" className="foot-icon mr-3"/>
+                    <img src={require('../assets/git.png')} alt="foot icons" className="foot-icon mr-3"/>
+                    <img src={require('../assets/heroku.png')} alt="foot icons" className="foot-icon"/>
               </div>
             </div>
 

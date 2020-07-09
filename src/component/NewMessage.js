@@ -101,8 +101,13 @@ class NewMessage extends Component {
             <option value="General">General</option>
             <option value="Technology">Technology</option>
             <option value="Business">Business</option>
-            <option value="Entertainment">Entertainment</option>
+            <option value="Entertainment">Movies & TV</option>
             <option value="Sports">Sports</option>
+            <option value="Food & Drink">Food & Drink</option>
+            <option value="Programming">Programming</option>
+            <option value="Travelling">Traveling</option>
+            <option value="Music">Music</option>
+            <option value="Fitness & Diet">Fitness & Diet</option>
           </select>
           <div className="my-3 h6">Body</div>
           <textarea

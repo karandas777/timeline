@@ -55,6 +55,14 @@ html{
   z-index: 1;
 }
 
+.foot-icon{
+  height: 48px;
+  width: 48px;
+  padding: 3px;
+  background-color: #eaeae8;
+  border-radius: 12px;
+}
+
 .master-holder{
   padding: 20px 0px;
   min-height: 100vh;
@@ -75,7 +83,9 @@ html{
 .post-img{
   height: auto;
   width: 75%;
-  border-radius: 50%;
+  border-radius: 5% 30% 5% 30%;
+  /* border-radius: 50%; */
+  box-shadow: -3px 3px 5px #4b4b4b81;
 }
 
 .post-body{
@@ -92,6 +102,7 @@ html{
 .userprofile{
   height: 150px;
   width: 150px;
+  box-shadow: -3px 3px 5px #4b4b4b81;
 }
 
 
@@ -101,5 +112,9 @@ html{
 
   .post-body{
     padding: 5px;
+  }
+
+  .post-img{
+    box-shadow: -2px 2px 3px #4b4b4b81;
   }
 }
