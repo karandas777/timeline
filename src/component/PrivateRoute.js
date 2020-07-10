@@ -6,7 +6,7 @@ export default class PrivateRoute extends Component {
 
         const token = localStorage.getItem('token');
         if (token === null || token === undefined || token === ""){
-            return(<Redirect to="/" />)
+            return(<Redirect to="/login" />)
         }
         else{
             return(<Route {...this.props} />)

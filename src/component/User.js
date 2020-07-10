@@ -175,17 +175,19 @@ class User extends Component {
                     </div>
                   )}
 
+                    <hr className="bg-grad rounded-pill pt-1 border-light mt-4"></hr>
+
                   <div className="mt-3 text-right">
                     <button
                       type="button"
-                      className="btn btn-danger mr-2"
+                      className="btn btn-dark mr-2"
                       data-dismiss="modal"
                       aria-label="Close"
                     >
                       <i className="fa fa-close"></i>
                     </button>
                     <button
-                      className="btn btn-warning mr-2"
+                      className="btn btn-dark mr-2"
                       onClick={this.funClearState}
                     >
                       <i className="fa fa-repeat"></i>
@@ -195,7 +197,7 @@ class User extends Component {
                       data-dismiss="modal"
                       onClick={this.funValidator}
                     >
-                      <i className="fa fa-plus"></i> Update
+                      Update
                     </button>
                   </div>
                 </div>
@@ -213,23 +215,27 @@ class User extends Component {
               <div className="modal-body p-0 text-left">
                 <div className="form-group form-bg rounded text-dark m-0 p-3">
                   <PageTitle title="Delete Post" />
+                  
                   <div className="my-4 h6 text-center">Are you sure ?</div>
 
                   <div className="my-3 text-center">
                     <button
-                      className="btn btn-secondary mr-5"
+                      className="btn btn-dark mr-5"
                       data-dismiss="modal"
                     >
                       No
                     </button>
                     <button
-                      className="btn btn-danger"
+                      className="btn btn-success"
                       data-dismiss="modal"
                       onClick={this.funDelete}
                     >
                       Yes
                     </button>
                   </div>
+
+                  <hr className="bg-grad rounded-pill pt-1 border-light mt-4"></hr>
+
                 </div>
               </div>
             </div>

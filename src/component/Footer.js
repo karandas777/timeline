@@ -11,7 +11,7 @@ export default class Footer extends Component {
             <div className="col-md-4 pt-5 pb-3">
             <Link
               className="foot-logo text-decoration-none text-light"
-              to="/all-posts"
+              to="/"
               data-toggle="tooltip"
               data-placement="top"
               title="Timeline."
@@ -86,7 +86,7 @@ export default class Footer extends Component {
         </div>
       </div>
       
-      <div className="text-center p-4 form-bg text-secondary">Designed by <span className="text-dark">Karan Das</span></div>
+      <div className="text-center p-4 form-bg text-dark">Designed by <span className="text-success">Karan Das</span></div>
       </React.Fragment>
     );
   }

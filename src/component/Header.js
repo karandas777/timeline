@@ -38,7 +38,7 @@ export default class Header extends Component {
           <nav className="navbar navbar-expand-lg navbar-dark">
             <Link
               className="nav-logo mb-0 text-decoration-none text-light"
-              to="/all-posts"
+              to="/"
               data-toggle="tooltip"
               data-placement="top"
               title="Timeline."
@@ -96,7 +96,7 @@ export default class Header extends Component {
                 </Link>
                 <Link
                   className="nav-item nav-link text-light"
-                  to="/"
+                  to="/login"
                   onClick={this.funLogOut}
                   data-toggle="tooltip"
                   data-placement="top"

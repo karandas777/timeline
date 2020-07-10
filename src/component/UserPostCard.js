@@ -30,24 +30,24 @@ export default class UserPostCard extends Component {
               <div className="mt-3 text-right">
                 <button
                   type="button"
-                  className="btn btn-primary mr-2"
+                  className="btn btn-success btn-sm mr-2"
                   data-toggle="modal"
                   data-target="#editor"
                   onClick={() => {
                     this.props.funSetPost(post);
                   }}
                 >
-                  Edit
+                  <i className="fa fa-pencil fa-fw"></i>
                 </button>
                 <button
-                  className="btn btn-danger"
+                  className="btn btn-success btn-sm"
                   data-toggle="modal"
                   data-target="#deletor"
                   onClick={() => {
                     this.props.funSetPost(post);
                   }}
                 >
-                  Delete
+                  <i className="fa fa-trash fa-fw"></i>
                 </button>
               </div>
             </div>

@@ -125,18 +125,20 @@ class NewMessage extends Component {
             </div>
           )}
 
+            <hr className="bg-grad rounded-pill pt-1 border-light mt-4"></hr>
+
           <div className="mt-3 text-right">
             <button
-              className="btn btn-danger mr-2"
+              className="btn btn-dark mr-2"
               onClick={this.routeToAllMessages}
             >
               <i className="fa fa-close"></i>
             </button>
-            <button className="btn btn-warning mr-2" onClick={this.funReset}>
+            <button className="btn btn-dark mr-2" onClick={this.funReset}>
               <i className="fa fa-repeat"></i>
             </button>
             <button className="btn btn-success" onClick={this.funValidator}>
-              <i className="fa fa-plus"></i> Add Post
+              Create
             </button>
           </div>
         </div>

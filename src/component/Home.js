@@ -19,6 +19,7 @@ export default class Home extends Component {
     }
 
     componentDidMount(){
+        window.scrollTo(0,0);
         const token = localStorage.getItem('token');
         if (token !== null && token !== undefined && token !== ""){
             this.props.history.push('/all-posts');
@@ -44,7 +45,7 @@ export default class Home extends Component {
 
     funSetDetails = async (token) => {
         localStorage.setItem('username',this.state.username);
-        localStorage.setItem(token);
+        localStorage.setItem('token',token);
     }
 
 
@@ -57,9 +58,9 @@ export default class Home extends Component {
         axios.post(APIURL+method,form)
         .then((res)=>{
             if(res.data.status === "OK"){
+                this.setState({ loading: false });
                 this.funSetDetails(res.data.token)
                 .then(()=>{
-                    this.setState({ loading: false });
                     this.props.history.push('/all-posts');
                 })
             }

@@ -11,6 +11,7 @@ import Info from "./component/Info";
 import SignUp from "./component/SignUp";
 import PrivateRoute from "./component/PrivateRoute"
 import Footer from "./component/Footer";
+import Landing from "./component/Landing";
 
 
 export default class App extends Component {
@@ -22,7 +23,8 @@ export default class App extends Component {
           <div className="container-fluid master-holder bg-light">
             
                 <Switch>
-                  <Route exact path="/" component={Home} />
+                  <Route exact path="/" component={Landing} />
+                  <Route exact path="/login" component={Home} />
                   <Route exact path="/signup" component={SignUp} />
                   <PrivateRoute exact path="/new-post" component={NewMessage} />
                   <PrivateRoute exact path="/all-posts" component={Messages} />

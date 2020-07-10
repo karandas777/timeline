@@ -52,8 +52,8 @@ html{
 }
 
 .foot-icon{
-  height: 48px;
-  width: 48px;
+  height: 58px;
+  width: 58px;
   padding: 5px;
   background-color: #eaeae8;
   border-radius: 50%;
@@ -97,6 +97,13 @@ html{
 .userprofile{
   height: 150px;
   width: 150px;
+}
+
+
+/* landing page */
+
+.landing-head{
+  font-size: 70px;
 }
 
 

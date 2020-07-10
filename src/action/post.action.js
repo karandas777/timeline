@@ -1,15 +1,13 @@
 import { ADD_POST, GET_ALL_POST, APIURL, GET_SORTED_POST, UPDATE_POST ,DELETE_POST } from "./types";
 import axios from "axios";
 
-
-const options = {
-  headers:{
-    "auth" : localStorage.getItem('token'),
-  }
-}
-
 export const funAddPost = (message) => (dispatch) => {
   const method = "/insert-post";
+  const options = {
+    headers:{
+      "auth" : localStorage.getItem('token'),
+    }
+  }
   axios
     .post(APIURL + method, message,options)
     .then((res) => {
@@ -27,6 +25,11 @@ export const funAddPost = (message) => (dispatch) => {
 
 export const funGetAllPosts = () => (dispatch) => {
   const method = "/select-post";
+  const options = {
+    headers:{
+      "auth" : localStorage.getItem('token'),
+    }
+  }
   axios
     .get(APIURL + method,options)
     .then((res) => {
@@ -44,6 +47,11 @@ export const funGetAllPosts = () => (dispatch) => {
 
 export const funGetSortedPosts = (data) => (dispatch) => {
   const method = "/sort-post";
+  const options = {
+    headers:{
+      "auth" : localStorage.getItem('token'),
+    }
+  }
   const query = data;
   axios.post(APIURL + method,{query:query} , options)
   .then((res)=>{
@@ -61,6 +69,11 @@ export const funGetSortedPosts = (data) => (dispatch) => {
 
 export const funUpdatePost = (message) => (dispatch) => {
   const method = "/edit-post";
+  const options = {
+    headers:{
+      "auth" : localStorage.getItem('token'),
+    }
+  }
   axios
     .post(APIURL + method, message, options)
     .then((res) => {
@@ -78,6 +91,11 @@ export const funUpdatePost = (message) => (dispatch) => {
 
 export const funDeletePost = (message) => (dispatch) => {
   const method = "/remove-post";
+  const options = {
+    headers:{
+      "auth" : localStorage.getItem('token'),
+    }
+  }
   axios
     .post(APIURL + method, message, options)
     .then((res) => {
