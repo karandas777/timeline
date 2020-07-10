@@ -69,7 +69,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="container py-3">
-               <PageTitle title="Log-In" />
+               <PageTitle title="Login" />
                 <div className="form-group form-bg rounded mt-5 col-md-5 mx-auto p-3">
                     <div className="text-dark h6 mb-3">Username</div>    
                     <input className="form-control my-3" type="text" name="username" value={this.state.username} onChange={this.funSetState}/>
@@ -88,7 +88,7 @@ export default class Home extends Component {
                             this.state.loading ? (<i className="fa fa-spin ml-1 fa-spinner"></i>) : null
                         }
                     </button>
-                    <hr className="w-100 bg-grad rounded pt-1"/>
+                    <hr className="w-100 bg-grad rounded-pill border-light pt-1"/>
                     <div className="text-center">
                     <Link to="/signup" className="text-decoration-none small text-dark">
                         Dont have an account? Create here.  

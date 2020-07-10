@@ -127,10 +127,10 @@ class User extends Component {
         <Back2Top />
 
         <div className="modal fade" id="editor" tabIndex="-1" role="dialog">
-          <div className="modal-dialog modal-dialog-centered" role="document">
+          <div className="modal-dialog" role="document">
             <div className="modal-content">
               <div className="modal-body p-0 text-left">
-                <div className="form-group form-bg rounded text-dark m-0 p-3">
+                <div className="form-group form-bg rounded text-dark m-0 pt-3 pb-4 px-3">
                   <PageTitle title="Edit Post" />
                   <div className="mb-3 mt-4 h6">Title</div>
                   <input

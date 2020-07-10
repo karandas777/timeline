@@ -22,6 +22,7 @@ export default class UserPostCard extends Component {
               <h4 className="card-title h2 mb-3">{post.post_title}</h4>
               <div className="my-3 small text-secondary">{post.post_cat}</div>
               <p className="card-text text-secondary">{post.post_body}</p>
+              <hr className="bg-grad rounded-pill pt-1 border-light mt-4"></hr>
               <div className="mt-3 text-dark">
                 Posted By : You
               </div>

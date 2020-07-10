@@ -25,11 +25,7 @@ html{
 /* navbar styling */
 
 .bg-grad{
-  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
-}
-
-.text-grad{
-  color:  rgb(242, 112, 156);
+  background-image: linear-gradient(to right, #00b09b, #96c93d);
 }
 
 .form-bg{
@@ -69,7 +65,8 @@ html{
 }
 
 .btt{
-  box-shadow: 0px 0px 5px #4b4b4b81;
+  box-shadow: 0px 0px 5px #4b4b4bc0;
+  border-radius: 50%;
 }
 
 /* all posts page */

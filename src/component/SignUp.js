@@ -69,13 +69,13 @@ export default class SignUp extends Component {
                             </div>
                         )}
 
-                    <button className="btn btn-warning mt-2 mb-3" onClick={this.funValidator}>
+                    <button className="btn btn-success mt-2 mb-3" onClick={this.funValidator}>
                         Create
                         {
                             this.state.loading ? (<i className="fa fa-spin ml-1 fa-spinner"></i>) : null
                         }
                     </button>
-                    <hr className="w-100 bg-grad rounded pt-1"/>
+                    <hr className="w-100 bg-grad rounded-pill border-light pt-1"/>
                     <div className="text-center">
                     <Link to="/" className="text-decoration-none small text-dark">
                         Already have an account? Log-In here.  
