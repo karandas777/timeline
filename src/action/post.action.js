@@ -1,10 +1,17 @@
 import { ADD_POST, GET_ALL_POST, APIURL, GET_SORTED_POST, UPDATE_POST ,DELETE_POST } from "./types";
 import axios from "axios";
 
+
+const options = {
+  headers:{
+    "auth" : localStorage.getItem('token'),
+  }
+}
+
 export const funAddPost = (message) => (dispatch) => {
   const method = "/insert-post";
   axios
-    .post(APIURL + method, message)
+    .post(APIURL + method, message,options)
     .then((res) => {
       if(res.data.status === "OK"){
         dispatch({
@@ -21,7 +28,7 @@ export const funAddPost = (message) => (dispatch) => {
 export const funGetAllPosts = () => (dispatch) => {
   const method = "/select-post";
   axios
-    .get(APIURL + method)
+    .get(APIURL + method,options)
     .then((res) => {
       if(res.data.status === "OK"){
       dispatch({
@@ -38,7 +45,7 @@ export const funGetAllPosts = () => (dispatch) => {
 export const funGetSortedPosts = (data) => (dispatch) => {
   const method = "/sort-post";
   const query = data;
-  axios.post(APIURL + method,{query:query})
+  axios.post(APIURL + method,{query:query} , options)
   .then((res)=>{
     if(res.data.status === "OK"){
     dispatch({
@@ -55,7 +62,7 @@ export const funGetSortedPosts = (data) => (dispatch) => {
 export const funUpdatePost = (message) => (dispatch) => {
   const method = "/edit-post";
   axios
-    .post(APIURL + method, message)
+    .post(APIURL + method, message, options)
     .then((res) => {
       if(res.data.status === "OK"){
         dispatch({
@@ -72,7 +79,7 @@ export const funUpdatePost = (message) => (dispatch) => {
 export const funDeletePost = (message) => (dispatch) => {
   const method = "/remove-post";
   axios
-    .post(APIURL + method, message)
+    .post(APIURL + method, message, options)
     .then((res) => {
       if(res.data.status === "OK"){
         dispatch({

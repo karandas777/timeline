@@ -17,8 +17,8 @@ html{
 /* general */
 
 .loading{
-  height: 230px;
-  width: 300px;
+  height: auto;
+  width: 50%;
   border-radius: 20px;
 }
 

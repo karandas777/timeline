@@ -29,31 +29,6 @@ export default class Home extends Component {
         this.setState({[e.target.name]:e.target.value});
     }
 
-
-    funLogIn=()=>{
-        const method = "/find-user";
-        const form = {
-            username : this.state.username,
-            password : this.state.password,
-        }
-        axios.post(APIURL+method,form)
-        .then((res)=>{
-            if(res.data.status === "OK"){
-                localStorage.setItem('username',this.state.username);
-                localStorage.setItem('token',res.data.token);
-                this.setState({ loading: false });
-                this.props.history.push('/all-posts');
-            }
-            else{
-                this.setState({loading:false});
-                this.setState({ valid: false });
-            }
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
-    }
-
     funValidator = () => {
         this.setState({ loading: true });
         if (this.state.username === "" || this.state.password === "" ) {
@@ -65,6 +40,38 @@ export default class Home extends Component {
           this.funLogIn();
         }
       };
+
+
+    funSetDetails = async (token) => {
+        localStorage.setItem('username',this.state.username);
+        localStorage.setItem(token);
+    }
+
+
+    funLogIn=()=>{
+        const method = "/find-user";
+        const form = {
+            username : this.state.username,
+            password : this.state.password,
+        }
+        axios.post(APIURL+method,form)
+        .then((res)=>{
+            if(res.data.status === "OK"){
+                this.funSetDetails(res.data.token)
+                .then(()=>{
+                    this.setState({ loading: false });
+                    this.props.history.push('/all-posts');
+                })
+            }
+            else{
+                this.setState({loading:false});
+                this.setState({ valid: false });
+            }
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    }
 
     render() {
         return (
