@@ -19,7 +19,7 @@ export default class App extends Component {
       <Provider store={store}>
         <Router>
         <Header />
-          <div className="container-fluid master-holder">
+          <div className="container-fluid master-holder bg-light">
             
                 <Switch>
                   <Route exact path="/" component={Home} />

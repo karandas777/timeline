@@ -21,8 +21,9 @@ export default class PostCard extends Component {
           <div className="col-10 py-3 form-bg text-dark rounded">
             <div className="post-body">
               <h4 className="card-title h2 mb-3">{post.post_title}</h4>
+              <div className="my-3 small text-secondary">{post.post_cat}</div>
               <p className="card-text text-secondary">{post.post_body}</p>
-              <div className="mt-3 text-dark">Posted By : {post.username} in {post.post_cat}</div>
+              <div className="mt-3 text-dark">Posted By : {post.username}</div>
             </div>
           </div>
           <div className="small py-1 px-2 w-100 text-right text-secondary">{convDate}</div>

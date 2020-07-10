@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
 
@@ -42,12 +42,12 @@ html{
 }
 
 .nav-logo{
-  font-family: 'Work Sans', sans-serif;
-  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+  font-size: 40px;
 }
 
 .foot-logo{
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Pacifico', cursive;
   font-size: 50px;
 }
 
@@ -58,9 +58,9 @@ html{
 .foot-icon{
   height: 48px;
   width: 48px;
-  padding: 3px;
+  padding: 5px;
   background-color: #eaeae8;
-  border-radius: 12px;
+  border-radius: 50%;
 }
 
 .master-holder{
@@ -83,9 +83,7 @@ html{
 .post-img{
   height: auto;
   width: 75%;
-  border-radius: 5% 30% 5% 30%;
-  /* border-radius: 50%; */
-  box-shadow: -3px 3px 5px #4b4b4b81;
+  border-radius: 50%;
 }
 
 .post-body{
@@ -102,7 +100,6 @@ html{
 .userprofile{
   height: 150px;
   width: 150px;
-  box-shadow: -3px 3px 5px #4b4b4b81;
 }
 
 
@@ -112,9 +109,5 @@ html{
 
   .post-body{
     padding: 5px;
-  }
-
-  .post-img{
-    box-shadow: -2px 2px 3px #4b4b4b81;
   }
 }
