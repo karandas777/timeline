@@ -9,6 +9,9 @@ import {
 import Loading from "./Loading";
 import UserPostCard from "./UserPostCard";
 import Back2Top from "./Back2Top";
+import { Link } from "react-router-dom";
+
+
 
 class User extends Component {
   constructor(props) {
@@ -91,6 +94,11 @@ class User extends Component {
     this.props.funGetSortedPosts({ username: name });
   };
 
+  funLogOut=()=>{
+    localStorage.removeItem('username');
+    localStorage.removeItem('token');
+  }
+
   render() {
     const name = localStorage.getItem("username");
     const imgUrl = "https://robohash.org/" + name + ".png";
@@ -109,6 +117,19 @@ class User extends Component {
 
         <div className="mb-5 mt-3 h1 text-center">
           {name} <i className="fa fa-check-circle text-primary"></i>
+        </div>
+
+        <div className="my-3 text-right">
+                <Link
+                  className="btn btn-danger btn-sm"
+                  to="/login"
+                  onClick={this.funLogOut}
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="LogOut"
+                >
+                  <i className="fa fa-power-off"></i> Logout
+                </Link>
         </div>
 
         <div className="text-secondary text-center my-3">Posts</div>

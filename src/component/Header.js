@@ -26,11 +26,6 @@ export default class Header extends Component {
     this.setState({ username: name });
   };
 
-  funLogOut=()=>{
-    localStorage.removeItem('username');
-    localStorage.removeItem('token');
-  }
-
   render() {
     return (
       <div className="container-fluid bg-grad head px-0">
@@ -93,16 +88,6 @@ export default class Header extends Component {
                   title="About the project"
                 >
                   About
-                </Link>
-                <Link
-                  className="nav-item nav-link text-light"
-                  to="/login"
-                  onClick={this.funLogOut}
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="LogOut"
-                >
-                  Logout
                 </Link>
               </div>
             </div>

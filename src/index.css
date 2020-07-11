@@ -56,7 +56,7 @@ html{
   width: 58px;
   padding: 5px;
   background-color: #eaeae8;
-  border-radius: 50%;
+  border-radius: 15%;
 }
 
 .master-holder{
@@ -101,6 +101,10 @@ html{
 
 
 /* landing page */
+
+.landing-holder{
+  height: 70vh;
+}
 
 .landing-head{
   font-size: 70px;
