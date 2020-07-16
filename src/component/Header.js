@@ -56,36 +56,32 @@ export default class Header extends Component {
                 <Link
                   className="nav-item nav-link text-light"
                   to="/user"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Profile"
+                  data-toggle="collapse"
+                  data-target="#navbarNavAltMarkup"
                 >
                   Profile
                 </Link>
                 <Link
                   className="nav-item nav-link text-light"
                   to="/all-posts"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="All Posts"
+                  data-toggle="collapse"
+                  data-target="#navbarNavAltMarkup"
                 >
                   Posts
                 </Link>
                 <Link
                   className="nav-item nav-link text-light"
                   to="/new-post"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="Create new Post"
+                  data-toggle="collapse"
+                  data-target="#navbarNavAltMarkup"
                 >
                   Create
                 </Link>
                 <Link
                   className="nav-item nav-link text-light"
                   to="/info"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title="About the project"
+                  data-toggle="collapse"
+                  data-target="#navbarNavAltMarkup"
                 >
                   About
                 </Link>
