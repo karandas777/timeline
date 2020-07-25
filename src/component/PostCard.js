@@ -20,6 +20,7 @@ export default class PostCard extends Component {
           </div>
           <div className="col-10 py-3 form-bg text-dark rounded">
             <div className="post-body">
+              <img className="img-fluid mb-4 rounded shadow main-img" src={post.post_image} alt={post.post_title} />
               <h4 className="card-title h2 mb-3">{post.post_title}</h4>
               <div className="my-3 small text-secondary">{post.post_cat}</div>
               <p className="card-text text-secondary">{post.post_body}</p>

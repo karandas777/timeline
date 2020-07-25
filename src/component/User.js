@@ -122,7 +122,7 @@ class User extends Component {
         <div className="my-3 text-right">
                 <Link
                   className="btn btn-danger btn-sm"
-                  to="/login"
+                  to="/"
                   onClick={this.funLogOut}
                   data-toggle="tooltip"
                   data-placement="top"

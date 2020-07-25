@@ -28,7 +28,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div className="container-fluid bg-grad head px-0">
+      <div className="container-fluid bg-grad head px-0 shadow">
         <div className="container px-0">
           <nav className="navbar navbar-expand-lg navbar-dark">
             <Link

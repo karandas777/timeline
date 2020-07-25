@@ -20,10 +20,10 @@ export default class Home extends Component {
 
     componentDidMount(){
         window.scrollTo(0,0);
-        const token = localStorage.getItem('token');
-        if (token !== null && token !== undefined && token !== ""){
-            this.props.history.push('/all-posts');
-        }
+        // const token = localStorage.getItem('token');
+        // if (token !== null && token !== undefined && token !== ""){
+        //     this.props.history.push('/all-posts');
+        // }
     }
     
     funSetState=(e)=>{
