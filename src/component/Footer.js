@@ -26,35 +26,44 @@ export default class Footer extends Component {
 
             <div className="col-md-5 pt-3">
               <h4 className="text-light">Navigate</h4>
-              <div className="mt-4 mb-3">
-                
-                  <Link className="btn btn-success btn-sm mr-1" to="/user">
+              <ul className="list-group mt-3 mb-2">
+                <div className="row p-0 m-0">
+                  <div className="col-6">
+                  <li>
+                  <Link className="nav-link text-light" to="/user">
                     Profile
                   </Link>
-                
-                  <Link className="btn btn-success btn-sm mr-1" to="/all-posts">
+                  </li>
+                  <li>
+                  <Link className="nav-link text-light" to="/all-posts">
                     Posts
                   </Link>
-                
-                  <Link className="btn btn-success btn-sm mr-1" to="/new-post">
+                  </li>
+                  </div>
+                  <div className="col-6">
+                  <li>
+                  <Link className="nav-link text-light" to="/new-post">
                     Create
                   </Link>
-                
-                  <Link className="btn btn-success btn-sm" to="/info">
+                  </li>
+                  <li>
+                  <Link className="nav-link text-light" to="/info">
                     About
                   </Link>
-                
-              </div>
+                  </li>
+                  </div>
+                </div>
+				      </ul>
             </div>
 
             <div className="col-md-3 pt-3">
               <h4 className="text-light">Contact</h4>
               <div className="mt-4">
-                    <div className="mb-2">
+                    <div className="mb-2 mt-2">
                         <i className="fa fa-envelope fa-fw mr-2"></i>
                         <a className="text-decoration-none text-light" href="mailto:karandas.21.08.98@gmail.com">Email</a>
                     </div>
-                    <div className="mb-0">
+                    <div className="mb-2">
                         <i className="fa fa-github fa-fw mr-2"></i>
                         <a className="text-decoration-none text-light" href="https://github.com/karandas777">Github</a>
                     </div>
