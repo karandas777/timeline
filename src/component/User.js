@@ -101,7 +101,7 @@ class User extends Component {
 
   render() {
     const name = localStorage.getItem("username");
-    const imgUrl = "https://robohash.org/" + name + ".png";
+    const imgUrl = "https://avatars.dicebear.com/api/bottts/" + name + ".svg";
 
     return (
       <div className="container py-3">
@@ -122,7 +122,7 @@ class User extends Component {
         <div className="my-3 text-right">
                 <Link
                   className="btn btn-danger btn-sm"
-                  to="/"
+                  to="/login"
                   onClick={this.funLogOut}
                   data-toggle="tooltip"
                   data-placement="top"

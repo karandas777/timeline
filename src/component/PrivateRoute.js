@@ -9,6 +9,7 @@ export default class PrivateRoute extends Component {
             return(<Redirect to="/login" />)
         }
         else{
+            console.log(token)
             return(<Route {...this.props} />)
         }
     }

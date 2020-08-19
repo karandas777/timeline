@@ -33,7 +33,7 @@ export default class SignUp extends Component {
             this.setState({loading:true});
             if(res.data.status === "OK"){
                 this.setState({loading:false});
-                this.props.history.push('/');
+                this.props.history.push('/login');
             }
         })
         .catch((err)=>{

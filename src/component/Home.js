@@ -61,7 +61,7 @@ export default class Home extends Component {
                 this.setState({ loading: false });
                 this.funSetDetails(res.data.token)
                 .then(()=>{
-                    this.props.history.push('/all-posts');
+                    this.props.history.push('/');
                 })
             }
             else{

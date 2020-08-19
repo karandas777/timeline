@@ -64,7 +64,7 @@ export default class Header extends Component {
                 </Link>
                 <Link
                   className="nav-item nav-link text-light"
-                  to="/all-posts"
+                  to="/"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="All Posts"

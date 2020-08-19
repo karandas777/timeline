@@ -5,7 +5,7 @@ export default class PostCard extends Component {
     const { post } = this.props;
     let date = new Date(this.props.post.createdAt);
     let convDate = date.toDateString();
-    const imgUrl = "https://robohash.org/" + post.post_title + ".png";
+    const imgUrl = "https://avatars.dicebear.com/api/bottts/" + post.post_title + ".svg";
 
     return (
       <div className="my-4 p-0">
@@ -15,7 +15,7 @@ export default class PostCard extends Component {
             <img
               src={imgUrl}
               alt={post.username}
-              className="post-img bg-grad p-1"
+              className="post-img bg-grad p-2"
             />
           </div>
           <div className="col-10 py-3 form-bg text-dark rounded">
