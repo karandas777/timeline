@@ -44,7 +44,7 @@ html{
 
 .foot-logo{
   font-family: 'Pacifico', cursive;
-  font-size: 50px;
+  font-size: 100px;
 }
 
 .foot{
@@ -122,5 +122,9 @@ html{
 
   .post-body{
     padding: 5px;
+  }
+  .foot-logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
   }
 }

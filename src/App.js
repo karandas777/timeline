@@ -22,10 +22,10 @@ export default class App extends Component {
           <div className="container-fluid master-holder bg-light">
             
                 <Switch>
-                  <Route exact path="/" component={Home} />
+                  <Route exact path="/login" component={Home} />
                   <Route exact path="/signup" component={SignUp} />
                   <PrivateRoute exact path="/new-post" component={NewMessage} />
-                  <PrivateRoute exact path="/all-posts" component={Messages} />
+                  <PrivateRoute exact path="/" component={Messages} />
                   <PrivateRoute exact path="/user" component={User} />
                   <PrivateRoute exact path="/info" component={Info} />
                 </Switch>
