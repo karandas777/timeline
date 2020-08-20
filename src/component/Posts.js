@@ -6,7 +6,7 @@ import PageTitle from "./PageTitle";
 import Loading from "./Loading";
 import Back2Top from "./Back2Top";
 
-class Messages extends Component {
+class Posts extends Component {
 
 
   componentDidMount() {
@@ -36,4 +36,4 @@ const mapStateToProps = (state) => ({
   allPosts: state.post.allPosts,
 });
 
-export default connect(mapStateToProps, { funGetAllPosts })(Messages);
+export default connect(mapStateToProps, { funGetAllPosts })(Posts);

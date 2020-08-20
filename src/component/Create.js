@@ -4,7 +4,7 @@ import { funAddPost, funGetAllPosts } from "../action/post.action";
 import PageTitle from "./PageTitle";
 import firedb from '../firebase';
 
-class NewMessage extends Component {
+class Create extends Component {
   constructor(props) {
     super(props);
 
@@ -215,5 +215,5 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, { funAddPost, funGetAllPosts })(
-  NewMessage
+  Create
 );

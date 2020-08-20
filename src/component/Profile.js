@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 
 
-class User extends Component {
+class Profile extends Component {
   constructor(props) {
     super(props);
 
@@ -275,4 +275,4 @@ export default connect(mapStateToProps, {
   funGetSortedPosts,
   funUpdatePost,
   funDeletePost,
-})(User);
+})(Profile);

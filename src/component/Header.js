@@ -55,7 +55,7 @@ export default class Header extends Component {
               <div className="navbar-nav ml-auto">
                 <Link
                   className="nav-item nav-link text-light"
-                  to="/user"
+                  to="/profile"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Profile"
@@ -73,7 +73,7 @@ export default class Header extends Component {
                 </Link>
                 <Link
                   className="nav-item nav-link text-light"
-                  to="/new-post"
+                  to="/create"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="Create new Post"

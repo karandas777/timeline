@@ -5,7 +5,7 @@ import {APIURL} from '../action/types';
 import axios from 'axios';
 
 
-export default class Home extends Component {
+export default class Login extends Component {
 
     constructor(props) {
         super(props)

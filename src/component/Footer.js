@@ -7,8 +7,8 @@ export default class Footer extends Component {
       <React.Fragment>
       <div className="container-fluid bg-grad foot text-light">
         <div className="container pt-3">
-          <div className="row pt-3 pb-0">
-            <div className="col-md-12 text-center">
+          <div className="row pt-3 pb-5">
+            <div className="col-md-8">
             <Link
               className="foot-logo text-decoration-none text-light"
               to="/"
@@ -16,11 +16,21 @@ export default class Footer extends Component {
               data-placement="top"
               title="Timeline."
             >
-              Timeline.
+              Timeline Blogs
             </Link>
-              <p className="mb-4 mt-0">
-               Blog Network
-              </p>
+            </div>
+
+            <div className="col-md-4 pt-3">
+                  
+                  <a className="text-light h6 text-decoration-none text-left d-block my-3" href="https://github.com/karandas777">
+                    <i className="fa fa-github mr-1 fa-fw"></i> Get connected on Github.
+                  </a>
+                  <a className="text-light h6 text-decoration-none text-left d-block my-3" href="https://pro-list.netlify.app/">
+                    <i className="fa fa-bars mr-1 fa-fw"></i> View my other Projects.
+                  </a>
+                  <a className="text-light h6 text-decoration-none text-left d-block mb-3" href="mailto:karandas.21.08.98@gmail.com">
+                    <i className="fa fa-envelope mr-1 fa-fw"></i> Contact via Mail.
+                  </a>
             </div>
           </div>
         </div>
