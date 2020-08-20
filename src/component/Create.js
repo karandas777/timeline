@@ -87,7 +87,7 @@ class Create extends Component {
   };
 
   routeToAllMessages = () => {
-    this.props.history.push("/all-posts");
+    this.props.history.push("/");
   };
 
   funReset = () => {
